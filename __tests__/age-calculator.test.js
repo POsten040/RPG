@@ -40,5 +40,6 @@ describe('AgeCalculator', () => {
   test('should tell user how many years under average life expectancy they have lived', () => {
     user.age = 20;
     let diff = user.expectancy();
-    expect(diff).toEqual("Good news! You've got 100 years left to live your dreams!(by my estimation)");
-})
+    expect(diff).toEqual("Good news! You've got 60 years left to live your dreams!(by my estimation)");
+  });
+});

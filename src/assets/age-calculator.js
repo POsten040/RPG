@@ -27,8 +27,6 @@ export default class AgeCalculator {
     if (this.age > 80) {
       return `Wow, you've lived ${diff} years past your government estimated expiration date! Congratulations!`
     }
-    else { 
-      return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
-    }
+    else return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
   }
 }
