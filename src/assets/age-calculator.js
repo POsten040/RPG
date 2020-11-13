@@ -15,4 +15,8 @@ export default class AgeCalculator {
     let age = Math.floor((parseInt(this.age) * 1.88));
     return age;
   }
+  jupiterAge() {
+    let age = Math.floor((parseInt(this.age) * 11.6));
+    return age;
+  }
 }
