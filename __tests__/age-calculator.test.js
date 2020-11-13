@@ -10,11 +10,11 @@ describe('AgeCalculator', () => {
     user = new AgeCalculator(name, age);
   })
     test('should take user input and store in user object', () => {
-      expect(user.dob).toBe("09/06/1990");
+      expect(user.age).toBe(30);
   })
     test('should calculate age in Mercury years', () => {
       let yearsOld = user.age;
-      let mAge = mercuryAge(yearsOld);
-      expect(mAge).toEqaul(7);
+      let mAge = user.mercuryAge(yearsOld);
+      expect(mAge).toEqual(7);
     })
 })
