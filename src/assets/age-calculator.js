@@ -24,7 +24,7 @@ export default class AgeCalculator {
   }
   expectancy() {
     if (this.age > 80) {
-      let yearsOver = Math.abs(this.age - 80) * this.planet[2];
+      let yearsOver = Math.floor(Math.abs((this.age - 80) * this.planet[4]));
       return (`You've lived ${yearsOver} years past your expected expiration date! Congrats!`);
     }
   }
