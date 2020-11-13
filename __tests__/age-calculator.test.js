@@ -9,6 +9,6 @@ describe('AgeCalculator', () => {
     user = new AgeCalculator(age);
   })
       test('should take user input and store in user object', () => {
-        expect(user.age).toBe("10/10/1010")
+        expect(user.age).toBe("09/06/1990")
   })
 })
