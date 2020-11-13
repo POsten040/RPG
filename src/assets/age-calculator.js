@@ -24,12 +24,8 @@ export default class AgeCalculator {
   }
   expectancy() {
     if (this.age > 80) {
-      this.planet.forEach(val, key, => {
-        let pMod = this.age * val;
-        this.expect = Math.floor(Math.abs((this.age - 80)));
-        let yearsOver = this.expect * pMod;
-        return (`You've lived ${yearsOver} years on planet ${this.planet.keys()} past your expected expiration date! Congrats!`);
-      });
+      let diff = Math.abs(this.age - 80);
+      return `Wow, you've lived ${diff} years past your government estimated expiration date! Congratulations!`
     }
   }
 }
