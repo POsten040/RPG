@@ -72,9 +72,9 @@ This program will calculate the age of a user for different planets, as well as 
     <td>Age = 20, AvgExpec = 80.</td>
     <td>You've got 60 years left to do stuff</td>
   <tr>
-    <td>Should tell user how many (planet)years they've lived for each planet.</td>
+    <td>Should tell user how many (planet)years they have left to live.</td>
     <td>Age = 99, AvgExpec = 80. mercury years .24 to 1 earth year.</td>
-    <td>You've lived 4 years over your expected expiration date</td>
+    <td>You've lived 4 years over your expected expiration date on Mercury</td>
   <tr>
 </table>
 

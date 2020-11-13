@@ -42,4 +42,8 @@ describe('AgeCalculator', () => {
     let diff = user.expectancy();
     expect(diff).toEqual("Good news! You've got 60 years left to live your dreams!(by my estimation)");
   });
+  test('should tell user same info as above but relative to each planet', () =>{
+  let arr = user.planetExpect();
+  expect(arr).toEqual('123');
+  });
 });

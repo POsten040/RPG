@@ -29,4 +29,13 @@ export default class AgeCalculator {
     }
     else return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
   }
+  planetExpect() {
+    let diff = Math.abs(this.age - 80);
+    let eAge = Math.floor(diff * this.planet[0]);
+    let meAge = Math.floor(diff * this.planet[1]);
+    let vAge = Math.floor(diff * this.planet[2]);
+    let maAge = Math.floor(diff * this.planet[3]);
+    let jAge = Math.floor(diff * this.planet[4]);
+    return `Check it out, this is your life expectancy on different planets: You're ${eAge} years old on Earth, ${meAge} years old on Mercury, ${vAge} years old on venus, ${maAge} years old on Mars, and ${jAge} years old on Jupiter!`;
+  }
 }
