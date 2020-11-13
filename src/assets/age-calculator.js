@@ -4,8 +4,8 @@ export default class AgeCalculator {
     this.age = age;
     this.relativeAge;
     this.expect;
-    this.planet = [1, 0.24, 0.62, 1.88, 11.6]
-  };
+    this.planet = [1, 0.24, 0.62, 1.88, 11.6];
+  }
   mercuryAge() {
     this.relativeAge = Math.floor(parseInt(this.age) * this.planet[1]);
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
@@ -33,7 +33,7 @@ export default class AgeCalculator {
       return `Here's your life expectancy on different planets: You've lived ${eAge} years past your expected demise on Earth, ${meAge} years past your expected demise on Mercury, ${vAge} years past your expected demise on Venus, ${maAge} years past your expected demise on Mars, and ${jAge} years past your expected demise on Jupiter!`;
     }
     else {
-      return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;;
-    };
+      return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
+    }
   }    
 }
