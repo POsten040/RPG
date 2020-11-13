@@ -9,5 +9,6 @@ export default class AgeCalculator {
   }
   venusAge() {
     let age = Math.floor((parseInt(this.age) * .62));
+    return age;
   }
 }
