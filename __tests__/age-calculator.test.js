@@ -16,5 +16,10 @@ describe('AgeCalculator', () => {
       let yearsOld = user.age;
       let mAge = user.mercuryAge(yearsOld);
       expect(mAge).toEqual(7);
-    })
+  })
+  test('should calculate age in Venus years', () => {
+    let yearsOld = user.age;
+    let mAge = user.venusAge(yearsOld);
+    expect(mAge).toEqual(18);
+  })
 })
