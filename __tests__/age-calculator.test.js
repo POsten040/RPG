@@ -44,6 +44,6 @@ describe('AgeCalculator', () => {
   });
   test('should tell user same info as above but relative to each planet', () =>{
   let arr = user.planetExpect();
-  expect(arr).toEqual('123');
+  expect(arr).toEqual("Check it out, this is your life expectancy on different planets: You're 50 years old on Earth, 12 years old on Mercury, 31 years old on venus, 94 years old on Mars, and 580 years old on Jupiter!");
   });
 });
