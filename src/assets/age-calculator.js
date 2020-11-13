@@ -4,33 +4,32 @@ export default class AgeCalculator {
     this.age = age;
     this.relativeAge;
     this.expect;
-    this.planet = new Map([
-      ['E', 0],
-      ['Me', 0.24],
-      ['V', 0.62],
-      ['Ma', 1.88],
-      ['J', 11.6]
-    ])};
+    this.planet = [1, 0.24, 0.62, 1.88, 11.6]
+  };
   mercuryAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get('Me'));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[1]);
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
-    this.relativeAge = Math.floor((parseInt(this.age) * this.planet.get('V')));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[2]);
     return (`${this.name} is ${this.relativeAge} years old on Venus!`);
   }
   marsAge() {
-    this.relativeAge = Math.floor((parseInt(this.age) * this.planet.get('Ma')));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[3]);
     return (`${this.name} is ${this.relativeAge} years old on Mars!`);
   }
   jupiterAge() {
-    this.relativeAge = Math.floor((parseInt(this.age) * this.planet.get('J')));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[4]);
     return (`${this.name} is ${this.relativeAge} years old on Jupiter!`);
   }
   expectancy() {
     if (this.age > 80) {
-      let expec = Math.floor(Math.abs((this.age - 80)));
-      return (`You've lived ${expec} years past your expected expiration date! Congrats!`);
-      };
+      this.planet.forEach(val, key, => {
+        let pMod = this.age * val;
+        this.expect = Math.floor(Math.abs((this.age - 80)));
+        let yearsOver = this.expect * pMod;
+        return (`You've lived ${yearsOver} years on planet ${this.planet.keys()} past your expected expiration date! Congrats!`);
+      });
     }
   }
+}

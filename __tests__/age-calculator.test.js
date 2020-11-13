@@ -35,6 +35,6 @@ describe('AgeCalculator', () => {
   test('should tell user how many years over average life expectancy they have lived', () => {
     user.age = 99;
     let diff = user.expectancy();
-    expect(diff).toEqual("You've lived 220 years past your expected expiration date! Congrats!");
+    expect(diff).toEqual("You've lived 19 years past your expected expiration date! Congrats!");
   })
 })

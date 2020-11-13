@@ -68,6 +68,10 @@ This program will calculate the age of a user for different planets, as well as 
     <td>99, average expectancy = 80</td>
     <td>You've lived 19 years over your expected expiration date</td>
   <tr>
+    <td>Should tell user how many years over agerave life expectancy they have lived.</td>
+    <td>99, average expectancy = 80</td>
+    <td>You've lived 19 years over your expected expiration date</td>
+  <tr>
 </table>
 
 ## Contact 
