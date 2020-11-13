@@ -28,7 +28,10 @@ export default class AgeCalculator {
       let over = this.planetExpect();
       return over;
     }
-    else return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
+    else {
+      let under = this.planetExpect();
+      return under;
+    };
   }
   planetExpect() {
     let diff = Math.abs(this.age - 80);
