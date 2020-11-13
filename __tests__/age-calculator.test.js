@@ -44,6 +44,6 @@ describe('AgeCalculator', () => {
   });
   test('should tell user same info as above but relative to each planet', () =>{
   let arr = user.planetExpect();
-  expect(arr).toEqual("Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!");
+  expect(arr).toEqual("Here's your life expectancy on different planets: You have 50 years left on Earth, 12 years left on Mercury, 31 years left on Venus, 94 years left on Mars, and 580 years left on Jupiter!");
   });
 });
