@@ -25,6 +25,6 @@ describe('AgeCalculator', () => {
   test('should calculate age in Mars years', () => {
     let yearsOld = user.age;
     let mAge = user.marsAge(yearsOld);
-    expect(mAge).toEqual(18);
+    expect(mAge).toEqual(7);
   })
 })
