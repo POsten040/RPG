@@ -4,10 +4,17 @@ export default class AgeCalculator {
     this.age = age;
     this.relativeAge;
     this.expect;
-    this.planet = [1, .24, .62, 1.88, 11.6]
+    this.planet = new Map(
+    [
+      [Earth, 1]
+      [Mercury, .24]
+      [Venus, .62]
+      [Mars, 1.88]
+      [Jupiter, 11.6]
+    ]);
   }
   mercuryAge() {
-    this.relativeAge = Math.floor((parseInt(this.age) * this.planet[1]));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get(Earth));
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
