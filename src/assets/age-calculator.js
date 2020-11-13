@@ -25,7 +25,8 @@ export default class AgeCalculator {
   expectancy() {
     let diff = Math.abs(this.age - 80);
     if (this.age > 80) {
-      return `Wow, you've lived ${diff} years past your government estimated expiration date! Congratulations!`
+      let over = this.planetExpect();
+      return over;
     }
     else return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
   }
@@ -36,6 +37,6 @@ export default class AgeCalculator {
     let vAge = Math.floor(diff * this.planet[2]);
     let maAge = Math.floor(diff * this.planet[3]);
     let jAge = Math.floor(diff * this.planet[4]);
-    return `Check it out, this is your life expectancy on different planets: You're ${eAge} years old on Earth, ${meAge} years old on Mercury, ${vAge} years old on venus, ${maAge} years old on Mars, and ${jAge} years old on Jupiter!`;
+    return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
   }
 }
