@@ -4,17 +4,16 @@ export default class AgeCalculator {
     this.age = age;
     this.relativeAge;
     this.expect;
-    this.planet = new Map(
-    [
-      [Earth, 1]
-      [Mercury, .24]
-      [Venus, .62]
-      [Mars, 1.88]
-      [Jupiter, 11.6]
+    this.planet = new Map([
+      ['E', 0],
+      ['Me', 0.24],
+      ['V', 0.62],
+      ['Ma', 1.88],
+      ['J', 11.6]
     ]);
   }
   mercuryAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get(Earth));
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get('Me'));
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
@@ -31,8 +30,10 @@ export default class AgeCalculator {
   }
   expectancy() {
     if (this.age > 80) {
-      let yearsOver = Math.floor(Math.abs((this.age - 80) * this.planet[4]));
-      return (`You've lived ${yearsOver} years past your expected expiration date! Congrats!`);
+      this.planet.forEach(planet => {
+        let yearsOver = Math.floor(Math.abs((this.age - 80) * planet[i]));
+        return (`You've lived ${yearsOver} years past your expected expiration date! Congrats!`);
+      }
     }
   }
 }
