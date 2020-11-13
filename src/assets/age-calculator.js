@@ -23,9 +23,12 @@ export default class AgeCalculator {
     return (`${this.name} is ${this.relativeAge} years old on Jupiter!`);
   }
   expectancy() {
+    let diff = Math.abs(this.age - 80);
     if (this.age > 80) {
-      let diff = Math.abs(this.age - 80);
       return `Wow, you've lived ${diff} years past your government estimated expiration date! Congratulations!`
+    }
+    else { 
+      return `Good news! You've got ${diff} years left to live your dreams!(by my estimation)`;
     }
   }
 }
