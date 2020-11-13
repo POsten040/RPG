@@ -1,7 +1,7 @@
 export default class AgeCalculator {
   constructor(name, age) {
     this.name = name;
-    this.age = age;
+    this.age = Math.abs(age);
     this.relativeAge;
     this.expect;
     this.planet = [1, 0.24, 0.62, 1.88, 11.6];
