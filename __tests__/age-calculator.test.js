@@ -1,11 +1,14 @@
 import { TestScheduler } from "jest";
-import { AgeCalculator } from './../src/assets/age-calculator.js';
+import AgeCalculator from './../src/assets/age-calculator.js';
 
 describe('AgeCalculator', () => {
+  let user;
+  let age = "09/06/1990";
   
-  test('should take user input and store in user object', () => {
-    const userInput = "09/06/1990"
-    let aCal = new AgeCalculator(userinput)
-    expect(aCal.age).toBe("10/10/1010")
+  beforeEach(() => {
+    user = new AgeCalculator(age);
+  })
+      test('should take user input and store in user object', () => {
+        expect(user.age).toBe("10/10/1010")
   })
 })
