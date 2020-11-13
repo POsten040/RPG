@@ -2,10 +2,12 @@ export default class AgeCalculator {
   constructor(name, age) {
     this.name = name;
     this.age = age;
+    this.relativeAge;
+    this.expectancy;
   }
   mercuryAge() {
-    let age = Math.floor((parseInt(this.age) * .24));
-    return age;
+    this.relativeAge = Math.floor((parseInt(this.age) * .24));
+    return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
     let age = Math.floor((parseInt(this.age) * .62));
