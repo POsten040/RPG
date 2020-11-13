@@ -15,26 +15,26 @@ describe('AgeCalculator', () => {
     test('should calculate age in Mercury years', () => {
       let yearsOld = user.age;
       let mAge = user.mercuryAge(yearsOld);
-      expect(mAge).toEqual(7);
+      expect(mAge).toEqual("Patrick is 7 years old on Mercury!");
   })
   test('should calculate age in Venus years', () => {
     let yearsOld = user.age;
     let vAge = user.venusAge(yearsOld);
-    expect(vAge).toEqual(18);
+    expect(vAge).toEqual("Patrick is 18 years old on Venus!");
   })
   test('should calculate age in Mars years', () => {
     let yearsOld = user.age;
     let mAge = user.marsAge(yearsOld);
-    expect(mAge).toEqual(56);
+    expect(mAge).toEqual("Patrick is 56 years old on Mars!");
   })
   test('should calculate age in Jupiter years', () => {
     let yearsOld = user.age;
     let jAge = user.jupiterAge(yearsOld);
-    expect(jAge).toEqual(348);
+    expect(jAge).toEqual("Patrick is 348 years old on Jupiter!");
   })
   test('should tell user how many years over average life expectancy they have lived', () => {
     user.age = 99;
     let diff = user.expectancy();
-    expect(diff).toEqual(348);
+    expect(diff).toEqual("You've lived 19 years past your expected expiration date! Congrats!");
   })
 })
