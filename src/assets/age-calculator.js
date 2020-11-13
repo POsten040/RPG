@@ -10,15 +10,22 @@ export default class AgeCalculator {
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
-    let age = Math.floor((parseInt(this.age) * .62));
-    return age;
+    this.relativeAge = Math.floor((parseInt(this.age) * .62));
+    return (`${this.name} is ${this.relativeAge} years old on Venus!`);
   }
   marsAge() {
-    let age = Math.floor((parseInt(this.age) * 1.88));
-    return age;
+    this.relativeAge = Math.floor((parseInt(this.age) * 1.88));
+    return (`${this.name} is ${this.relativeAge} years old on Mars!`);
   }
   jupiterAge() {
-    let age = Math.floor((parseInt(this.age) * 11.6));
-    return age;
+    this.relativeAge = Math.floor((parseInt(this.age) * 11.6));
+    return (`${this.name} is ${this.relativeAge} years old on Jupiter!`);
+  }
+  expectancy() {
+    if (this.age > 80) {
+      let yearsOver = Math.abs(this.age - 80);
+      return yearsOver
+      // return (`You've lived ${yearsOver} years past your expected expiration date! Congrats!`);
+    }
   }
 }
