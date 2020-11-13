@@ -13,8 +13,8 @@ describe('AgeCalculator', () => {
       expect(user.age).toBe(30);
   })
     test('should accet negative numbers for age and treat them as positive', () => {
-      user.age = -9;
-      expect(user.age).toBe(9);
+      user.age = -10;
+      expect(user.age).toBe(10);
   })
     test('should calculate age in Mercury years', () => {
       let yearsOld = user.age;
