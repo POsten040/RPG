@@ -11,4 +11,8 @@ export default class AgeCalculator {
     let age = Math.floor((parseInt(this.age) * .62));
     return age;
   }
+  marsAge() {
+    let age = Math.floor((parseInt(this.age) * 1.88));
+    return age;
+  }
 }
