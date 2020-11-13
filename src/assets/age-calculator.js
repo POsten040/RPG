@@ -37,6 +37,6 @@ export default class AgeCalculator {
     let vAge = Math.floor(diff * this.planet[2]);
     let maAge = Math.floor(diff * this.planet[3]);
     let jAge = Math.floor(diff * this.planet[4]);
-    return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
+    return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
   }
 }
