@@ -52,9 +52,17 @@ This program will calculate the age of a user for different planets, as well as 
     <td>30</td>
     <td>7</td>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Should calculate age in Venus years(rounded down).</td>
+    <td>30</td>
+    <td>18</td>
+  <tr>
+    <td>Should calculate age in Mars years(rounded down).</td>
+    <td>30</td>
+    <td>56</td>
+  <tr>
+    <td>Should calculate age in Jupiter years(rounded down).</td>
+    <td>30</td>
+    <td>348</td>
   <tr>
     <td></td>
     <td></td>
