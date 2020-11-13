@@ -35,15 +35,11 @@ describe('AgeCalculator', () => {
   test('should tell user how many years over average life expectancy they have lived', () => {
     user.age = 99;
     let diff = user.expectancy();
-    expect(diff).toEqual("Here's your life expectancy on different planets: You have 19 years left on Earth, 4 years left on Mercury, 11 years left on Venus, 35 years left on Mars, and 220 years left on Jupiter!");
+    expect(diff).toEqual("You've lived 19 years past your expected demise on Earth, 4 years past your expected demise on Mercury, 11 years past your expected demise on Venus, 35 years past your expected demise on Mars, and 220 years past your expected demise on Jupiter!");
   })
   test('should tell user how many years under average life expectancy they have lived', () => {
     user.age = 20;
     let diff = user.expectancy();
-    expect(diff).toEqual("Good news! You've got 60 years left to live your dreams!(by my estimation)");
-  });
-  test('should tell user same info as above but relative to each planet', () =>{
-  let arr = user.planetExpect();
-  expect(arr).toEqual("Here's your life expectancy on different planets: You have 50 years left on Earth, 12 years left on Mercury, 31 years left on Venus, 94 years left on Mars, and 580 years left on Jupiter!");
+    expect(diff).toEqual("Here's your life expectancy on different planets: You have 60 years left on Earth, 14 years left on Mercury, 37 years left on Venus, 112 years left on Mars, and 696 years left on Jupiter!");
   });
 });

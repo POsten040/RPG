@@ -24,22 +24,16 @@ export default class AgeCalculator {
   }
   expectancy() {
     let diff = Math.abs(this.age - 80);
-    if (this.age > 80) {
-      let over = this.planetExpect();
-      return over;
-    }
-    else {
-      let under = this.planetExpect();
-      return under;
-    };
-  }
-  planetExpect() {
-    let diff = Math.abs(this.age - 80);
     let eAge = Math.floor(diff * this.planet[0]);
     let meAge = Math.floor(diff * this.planet[1]);
     let vAge = Math.floor(diff * this.planet[2]);
     let maAge = Math.floor(diff * this.planet[3]);
     let jAge = Math.floor(diff * this.planet[4]);
-    return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
-  }
+    if (this.age > 80) {
+      return `Here's your life expectancy on different planets: You've lived ${eAge} years past your expected demise on Earth, ${meAge} years past your expected demise on Mercury, ${vAge} years past your expected demise on Venus, ${maAge} years past your expected demise on Mars, and ${jAge} years past your expected demise on Jupiter!`;
+    }
+    else {
+      return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;;
+    };
+  }    
 }
