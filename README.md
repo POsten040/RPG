@@ -44,9 +44,21 @@ This program will calculate the age of a user for different planets, as well as 
     <th>Input</th>
     <th>Output</th>
   <tr>
-    <td>Should store user input for age in user object.</td>
+    <td>Should store user input for DOB in user object.</td>
     <td>9/6/1990</td>
-    <td>user.age = 30</td>
+    <td>user.age = 9/6/1990</td>
+  <tr>
+    <td>Should calculate age in Mercury years(rounded down).</td>
+    <td>30</td>
+    <td>7</td>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
 </table>
 
 ## Contact 
