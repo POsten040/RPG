@@ -35,5 +35,4 @@ export default class AgeCalculator {
     else {
       return `Here's your life expectancy on different planets: You have ${eAge} years left on Earth, ${meAge} years left on Mercury, ${vAge} years left on Venus, ${maAge} years left on Mars, and ${jAge} years left on Jupiter!`;
     }
-  }    
-}
+

@@ -46,5 +46,4 @@ describe('AgeCalculator', () => {
     let diff = user.expectancy();
     expect(diff).toEqual("Here's your life expectancy on different planets: You have 60 years left on Earth, 14 years left on Mercury, 37 years left on Venus, 112 years left on Mars, and 696 years left on Jupiter!");
   });
-
 });
