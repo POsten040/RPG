@@ -92,6 +92,9 @@ This program will calculate the age of a user for different planets, as well as 
 - Bootstrap
 - Javascript
 - JQuery
+- Node.js
+- Webpack
+- Jest
 
 ## License
 
