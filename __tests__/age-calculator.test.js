@@ -4,13 +4,15 @@ import AgeCalculator from './../src/assets/age-calculator.js';
 describe('AgeCalculator', () => {
   let user;
   let age = 30;
-  let name = "Patrick"
+  let name = "Patrick";
+  let planet = 'Earth';
   
   beforeEach(() => {
-    user = new AgeCalculator(name, age);
+    user = new AgeCalculator(name, age, planet);
   })
     test('should take user input and store in user object', () => {
       expect(user.age).toBe(30);
+      expect(user.planet).toBe('Earth')
   })
     test('should accet negative numbers for age and treat them as positive', () => {
       let newUser = new AgeCalculator("name", -9);
