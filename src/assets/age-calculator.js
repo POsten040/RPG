@@ -4,23 +4,32 @@ export default class AgeCalculator {
     this.age = Math.abs(age);
     this.relativeAge;
     this.expect;
-    this.planet = [1, 0.24, 0.62, 1.88, 11.6];
+    this.planet = new Map([
+      ['Earth', 1],
+      ['Mercury', 0.24],
+      ['Venus', 0.62],
+      ['Mars', 1.88],
+      ['Jupiter', 11.6]
+    ])
   }
   mercuryAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[1]);
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get['Earth']);
     return (`${this.name} is ${this.relativeAge} years old on Mercury!`);
   }
   venusAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[2]);
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get['Mercury']);
     return (`${this.name} is ${this.relativeAge} years old on Venus!`);
   }
   marsAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[3]);
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get['Venus']);
     return (`${this.name} is ${this.relativeAge} years old on Mars!`);
   }
   jupiterAge() {
-    this.relativeAge = Math.floor(parseInt(this.age) * this.planet[4]);
+    this.relativeAge = Math.floor(parseInt(this.age) * this.planet.get['Mars']);
     return (`${this.name} is ${this.relativeAge} years old on Jupiter!`);
+  }
+  expectancy () {
+    .entries(function)
   }
   expectancy() {
     let diff = Math.abs(this.age - 80);

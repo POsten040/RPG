@@ -32,9 +32,9 @@ This program will calculate the age of a user for different planets, as well as 
 
 1. Open GitBash/Bash, type 
 : `git clone {https://github.com/POsten040/week-5-project}`
-2. Navigate to the week-1-project directory and type
-: `**Code** .`
-3. Your **Code** editor will open the files, from there you can type `npm run start` to open index.html, or simply open the file with your browser.
+2. From your terminal, install dependencies by typing `npm i`
+3. You can run the tests in the project with `npm run test`
+4. To launch the project in a browser type `npm run start`.
 
 ## Specs
 ### Describe AgeCalculator
