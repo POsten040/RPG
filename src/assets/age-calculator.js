@@ -18,9 +18,9 @@ export default class AgeCalculator {
     this.relativeAge = Math.floor(parseInt(this.age) * weight);
     let expected = (this.expec - this.age) * weight;
     if (Math.sign(expected) === 1) { 
-      return(`${this.name} is ${this.relativeAge} years old on ${this.planet}, and they have ${expected} ${this.planet} years left to be groovy.`);
+      return(`${this.name} is ${this.relativeAge} years old on ${this.planet}, and they have ${Math.floor(expected)} ${this.planet} years left to be groovy.`);
     } else {
-      return (`${this.name} is ${this.relativeAge} years old on ${this.planet}, and they have been groovy ${Math.abs(expected)} ${this.planet} years more than we expected.`);
+      return (`${this.name} is ${this.relativeAge} years old on ${this.planet}, and they have been groovy ${Math.floor(Math.abs(expected))} ${this.planet} years more than we expected.`);
     }
   }
 }
