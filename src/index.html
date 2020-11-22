@@ -7,10 +7,10 @@
 		<form id="user-input">
       <h2>Enter your age in years</h2>
 			<label for="user-date"></label>
-      <input type="number" id="user-date" />
+      <input type="number" id="user-date" required>
       <h2>Enter you name</h2>
       <label for="user-name"></label>
-      <input type="text" id="user-name" />
+      <input type="text" id="user-name" required>
       <h2>Select your planet</h2>
       <input type="radio" id="ear" class="planets" name="planets" value="Earth" required>
       <label for="ear">Earth</label><br>
@@ -23,6 +23,7 @@
       <input type="radio" id="jup" class="planets" name="planets" value="Jupiter" required>
       <label for="jup">Jupiter</label><br>
       <button type="submit">Submit</button><br>
+      <button type="reset" id="reset">Reset Form</button>
     </form>    
 		<div id="results"></div>
 	</body>
