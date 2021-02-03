@@ -31,13 +31,15 @@ $(document).ready(function() {
 
   $("#createCharacter").submit(function(event) {
     event.preventDefault();
-    console.log($("#class").val())
-    let player1 = storeState(initialValues);
+    
+    const player1 = storeState(initialValues);
+    const player1 = changeState("name")($("#playerName").val());
+    console.log(player1);
+    
    //const playerName=changeState("Remus");//`$("#playerName").val()`);
     //console.log(playerName);
     //const newPlayer1State=player1(playerName);
     //console.log(newPlayer1State);
-   player1 = changeState("name")($("#playerName").val());
     // player1.name=`$("#playerName").val()`;
     console.log(player1.name);
     // $('#playerName').text(newPlayer= changeState(`${player1.name}`));
