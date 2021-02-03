@@ -5,8 +5,8 @@ import './css/styles.css';
 
 export const storeState = (initialValues) => {
   let currentState = initialValues;
-  return (stateChangeFunction = state => state) => {
-    const newState = stateChangeFunction(currentState);
+  return (stateChangeFunction = state => state, playerName) => {
+    const newState = stateChangeFunction(currentState, playerName);
     currentState = {...newState};
     return newState;
   }
@@ -41,23 +41,21 @@ const playerStateControl = storeState();
 // const input = $("")... 
 
 //BROOKES EXAMPLE
-const feed = changeState("soil");
-const blueFood = feed(5);
-const newFernState = fern(blueFood);
-console.log("add 5 to soil", newFernState);
+// ]'
+
 //BROOKES EXAMPLE
 
 const updateState = storeState();
 
+const initialGameValues = {numberOfPlayersAlive: 0, numberOfPlayersDead: 0};
 const newPlayer2 = addPlayerToState(initialGameValues.name)("Waluigi");
 console.log(newPlayer2);
 
-const initialGameValues = {numberOfPlayersAlive: 0, numberOfPlayersDead: 0};
 const gameMaster = storeState(initialGameValues);
 const addPlayerToGame = changeState("numberOfPlayersAlive")(1);
 const playerDies = changeState("numberOfPlayersDead")(1);
 
-const assignName = changeState("name")(playerName);
+// const assignName = changeState("name")(playerName);
 
 const updateHealth = changeState("health");
 

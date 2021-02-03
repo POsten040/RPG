@@ -8,17 +8,18 @@
   </head>
   <body>
     <form id="createCharacter">
-      <label for="playerName"></label>
-      <input type="text" id="playerName" required>
-      <input type="radio" id="underpants" value="underpants"><br>
-      <input type="radio" id="anime" value="anime"><br>
-      <input type="radio" id="waluigi" value="waluigi"><br>
-      <button class="btn btn-success" id="createCharacter">Choose Class</button>
+      <!-- <label for="playerName"></label>
+      <input type="text" id="playerName" required> -->
+      <!-- <label for="underpants">Underpants</label> -->
+      <input type="radio" name="class" id="underpants" value="underpants">Underpants<br>
+      <input type="radio" name="class" id="anime" value="anime">Anime Hair Guy<br>
+      <input type="radio" name="class" id="waluigi" value="waluigi">Waluigi<br>
+      <button class="btn btn-success" type="submit">Choose Class</button>
     </form>
     <div class="container">
-      <div class="grow-buttons">
-        <button class="btn-success" id="feed">Grow Plant</button>
-        <button class="btn-success" id="show-state">Current State</button>
+      <div class="action-buttons">
+        <button class="btn-success" id="hurt">Do a hurt</button>
+        <button class="btn-success" id="heal">Do a heal</button>
       </div>
       <div id="name-value"></div>
       <h1>Your Player's Values</h1>

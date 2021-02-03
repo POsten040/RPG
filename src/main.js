@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
-import { changeState, storeState  } from '../src/js/player.js';
+import './assets/css/styles.css';
+import { storeState  } from './assets/player.js';
 
-
+// changeState
 // const initialValues = { name: "", health: 10, attack: 0, defense: 0};
 
 // const player = storeState(initialValues); //creates basic player object
@@ -22,6 +22,8 @@ import { changeState, storeState  } from '../src/js/player.js';
 const underpants = { name: "Captain Underpants", health: 10, attack: 3, defense: 4};
 const anime = { name: "Cool Anime Hair", health: 10, attack: 9, defense: 2};
 const waluigi = { name: "Waluigi", health: 15, attack: 5, defense: 1};
+  
+const initialValues = { name: "", health: 10, attack: 0, defense: 0, specialAttack: ""}
 
 $(document).ready(function() {
   // $('#attack').click(function() {
@@ -31,19 +33,27 @@ $(document).ready(function() {
 
   $("#createCharacter").submit(function(event) {
     event.preventDefault();
+    const id = $("input[name='class']:checked").val();
+    console.log(id);
+    if( id === "underpants"){
+      console.log(underpants);
+    } else if (id === "anime"){
+      console.log(anime);
+    } else if (id === "waluigi"){
+      console.log(waluigi);
+    }
+    // const player1 = storeState(initialValues);
+    // console.log(player1);
     
-    const player1 = storeState(initialValues);
-    const player1 = changeState("name")($("#playerName").val());
-    console.log(player1);
-    
-   //const playerName=changeState("Remus");//`$("#playerName").val()`);
+    // const player1 = changeState("name")($("#playerName").val());
+    //const playerName=changeState("Remus");//`$("#playerName").val()`);
     //console.log(playerName);
     //const newPlayer1State=player1(playerName);
     //console.log(newPlayer1State);
     // player1.name=`$("#playerName").val()`;
-    console.log(player1.name);
+    // console.log(player1.name);
     // $('#playerName').text(newPlayer= changeState(`${player1.name}`));
-    $('name-value').text(`Player's name is now ${player1.name}`);
+    // $('name-value').text(`Player's name is now ${player1.name}`);
   });
 
 
