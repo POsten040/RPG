@@ -15,7 +15,7 @@ devServer: {
 plugins: [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
-    title: 'My Project',
+    title: 'RPG',
     template: './src/index.html',
     inject: 'body'
   })

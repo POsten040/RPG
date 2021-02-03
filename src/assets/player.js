@@ -35,12 +35,3 @@ const player1 = changeState("Remus");
 const attack = changeState("health")(-5)
 
 const defend = changeState("defense")(3)
-
-$(document).ready(function() {
-
-  $('#attack').click(function() {
-    const newState = stateControl(attack);
-    $('health-value').text(`Hit! Health is now ${newState.health}`
-
-
-}

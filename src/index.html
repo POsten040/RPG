@@ -4,17 +4,32 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    <title>Cr</title>
+    <title>Create a Character</title>
   </head>
   <body>
+    <form id="createCharacter">
+      <label for="playerName"></label>
+      <input type="text" id="playerName" required>
+      <button id="createCharacter" class="btn btn-success" type="submit">Create Player</button>
+    </form>
+    <form id="class">
+      <input type="radio" id="underpants" value="underpants"><br>
+      <input type="radio" id="anime" value="anime"><br>
+      <input type="radio" id="waluigi" value="waluigi"><br>
+      <button class="btn btn-success" id="class">Choose Class</button>
+    </form>
     <div class="container">
       <div class="grow-buttons">
         <button class="btn-success" id="feed">Grow Plant</button>
         <button class="btn-success" id="show-state">Current State</button>
       </div>
-      <h1>Your Plant's Values</h1>
-      <h3><div id="soil-value">0</div></h3>
-      <h3><div id="light-value">0</div></h3>
+      <div id="name-value"></div>
+      <h1>Your Player's Values</h1>
+      <h3><div id="name-value"></div></h3>
+      <h3><div id="attack-value">0</div></h3>
+      <h3><div id="defense-value">0</div></h3>
     </div>
   </body>
 </html>
+
+
