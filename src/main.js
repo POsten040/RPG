@@ -70,6 +70,11 @@ $(document).ready(function() {
       console.log(player1);
     // const newState = player1(getHurtALot);
   });
+  $("#heal").click(function() {
+    const player1 = player1StateControl(changeState("health")(5));
+    $("#health-value").text(`${player1.health}`);
+    console.log(player1);
+  });
     
 });
     // const player1 = storeState(initialValues);
