@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/styles.css';
-import { storeState  } from './assets/player.js';
+import { storeState, healYourSelf,  getHurtALot, changeState } from './assets/player.js';
 
 // changeState
 // const initialValues = { name: "", health: 10, attack: 0, defense: 0};
@@ -17,40 +17,61 @@ import { storeState  } from './assets/player.js';
 // player1.name="Remus";
 
 // const attack = changeState("health")(-5);
-
+const updateHealth = changeState("health");
 // const defend = changeState("defense")(3);
 const underpants = { name: "Captain Underpants", health: 10, attack: 3, defense: 4};
 const anime = { name: "Cool Anime Hair", health: 10, attack: 9, defense: 2};
 const waluigi = { name: "Waluigi", health: 15, attack: 5, defense: 1};
   
-const initialValues = { name: "", health: 10, attack: 0, defense: 0, specialAttack: ""}
+const initialValues = { name: "", health: 10, attack: 0, defense: 0, specialAttack: ""};
 
 $(document).ready(function() {
   // $('#attack').click(function() {
   //   const newState = stateControl(attack);
   //   $('health-value').text(`Hit! Health is now ${newState.health}`);
   // });
-
+  let player1StateControl;
   $("#createCharacter").submit(function(event) {
     event.preventDefault();
     const id = $("input[name='class']:checked").val();
     console.log(id);
-    if( id === "underpants"){
-      $("#name-value").text(`${underpants.name}`)
-      $("#health-value").text(`${underpants.health}`)
-      $("#attack-value").text(`${underpants.attack}`)
-      $("#defense-value").text(`${underpants.defense}`)
-    } else if (id === "anime"){
-      $("#name-value").text(`${anime.name}`)
-      $("#health-value").text(`${anime.health}`)
-      $("#attack-value").text(`${anime.attack}`)
-      $("#defense-value").text(`${anime.defense}`)
-    } else if (id === "waluigi"){
-      $("#name-value").text(`${waluigi.name}`)
-      $("#health-value").text(`${waluigi.health}`)
-      $("#attack-value").text(`${waluigi.attack}`)
-      $("#defense-value").text(`${waluigi.defense}`)
-    }
+    
+      if( id === "underpants"){
+        player1StateControl = storeState(underpants);
+        const player1 = player1StateControl();
+        $("#name-value").text(`${player1.name}`);
+        $("#health-value").text(`${player1.health}`);
+        $("#attack-value").text(`${player1.attack}`);
+        $("#defense-value").text(`${player1.defense}`);
+        
+        
+      } else if (id === "anime"){
+        player1StateControl = storeState(anime);
+        const player1 = player1StateControl();
+        $("#name-value").text(`${player1.name}`);
+        $("#health-value").text(`${player1.health}`);
+        $("#attack-value").text(`${player1.attack}`);
+        $("#defense-value").text(`${player1.defense}`);
+        
+        
+      } else if (id === "waluigi"){
+        player1StateControl = storeState(waluigi);
+        const player1 = player1StateControl();
+        $("#name-value").text(`${player1.name}`);
+        $("#health-value").text(`${player1.health}`);
+        $("#attack-value").text(`${player1.attack}`);
+        $("#defense-value").text(`${player1.defense}`);
+    
+  }
+});
+  $("#hurt").click(function(){
+    const player1 = player1StateControl(changeState("health")(-9));
+      $("#health-value").text(`${player1.health}`);
+      console.log(player1);
+    // const newState = player1(getHurtALot);
+  });
+    
+});
     // const player1 = storeState(initialValues);
     // console.log(player1);
     
@@ -63,13 +84,6 @@ $(document).ready(function() {
     // console.log(player1.name);
     // $('#playerName').text(newPlayer= changeState(`${player1.name}`));
     // $('name-value').text(`Player's name is now ${player1.name}`);
-  });
-
-
-
-
-
-});
 
 // const initialValues = {name: "", attack: 0, defense: 0};
 // const player1 = storeState(initialValues); //name="",  health=0...

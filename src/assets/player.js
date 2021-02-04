@@ -40,11 +40,6 @@ const playerStateControl = storeState();
 // Actions
 // const input = $("")... 
 
-//BROOKES EXAMPLE
-// ]'
-
-//BROOKES EXAMPLE
-
 const updateState = storeState();
 
 const initialGameValues = {numberOfPlayersAlive: 0, numberOfPlayersDead: 0};
@@ -57,15 +52,12 @@ const playerDies = changeState("numberOfPlayersDead")(1);
 
 // const assignName = changeState("name")(playerName);
 
-const updateHealth = changeState("health");
+const getHurtALot = changeState("health")(-9);
 
-const getHurtALot = updateHealth(-9);
-const newPlayerState = updateHealth(getHurtALot);
+// const getHurtALot = updateHealth(-9);
+// const newPlayerState = player1StateControl(getHurtALot);
 
-const healYourself = updateHealth(5);
-
-
-
+const healYourself = changeState("health")(5);
 
 // const attack = changeState("health")(-5)
 
