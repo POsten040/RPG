@@ -36,11 +36,20 @@ $(document).ready(function() {
     const id = $("input[name='class']:checked").val();
     console.log(id);
     if( id === "underpants"){
-      console.log(underpants);
+      $("#name-value").text(`${underpants.name}`)
+      $("#health-value").text(`${underpants.health}`)
+      $("#attack-value").text(`${underpants.attack}`)
+      $("#defense-value").text(`${underpants.defense}`)
     } else if (id === "anime"){
-      console.log(anime);
+      $("#name-value").text(`${anime.name}`)
+      $("#health-value").text(`${anime.health}`)
+      $("#attack-value").text(`${anime.attack}`)
+      $("#defense-value").text(`${anime.defense}`)
     } else if (id === "waluigi"){
-      console.log(waluigi);
+      $("#name-value").text(`${waluigi.name}`)
+      $("#health-value").text(`${waluigi.health}`)
+      $("#attack-value").text(`${waluigi.attack}`)
+      $("#defense-value").text(`${waluigi.defense}`)
     }
     // const player1 = storeState(initialValues);
     // console.log(player1);
