@@ -24,79 +24,105 @@ const anime = { name: "Cool Anime Hair", health: 10, attack: 9, defense: 2};
 const waluigi = { name: "Waluigi", health: 15, attack: 5, defense: 1};
   
 const initialValues = { name: "", health: 10, attack: 0, defense: 0, specialAttack: ""};
-
+let player1StateControl;
+let player2StateControl;
 $(document).ready(function() {
   // $('#attack').click(function() {
   //   const newState = stateControl(attack);
   //   $('health-value').text(`Hit! Health is now ${newState.health}`);
   // });
-  let player1StateControl;
-  $("#createCharacter").submit(function(event) {
+  
+  
+  //PLAYER ONE
+});
+
+  $("#p1-hurt").click(function(){
+    const player2 = player2StateControl(changeState("health")(-9));
+      $("#p2-health-value").text(`${player2.health}`);
+      console.log(player2);
+    // const newState = player1(getHurtALot);
+  });
+  $("#p1-heal").click(function() {
+    const player1 = player1StateControl(changeState("health")(5));
+    $("#p1-health-value").text(`${player1.health}`);
+    console.log(player1);
+  });
+  $("#p1-createCharacter").submit(function(event) {
     event.preventDefault();
-    const id = $("input[name='class']:checked").val();
+    const id = $("input[name='p1-class']:checked").val();
     console.log(id);
     
-      if( id === "underpants"){
+      if( id === "p1-underpants"){
         player1StateControl = storeState(underpants);
         const player1 = player1StateControl();
-        $("#name-value").text(`${player1.name}`);
-        $("#health-value").text(`${player1.health}`);
-        $("#attack-value").text(`${player1.attack}`);
-        $("#defense-value").text(`${player1.defense}`);
+        $("#p1-name-value").text(`${player1.name}`);
+        $("#p1-health-value").text(`${player1.health}`);
+        $("#p1-attack-value").text(`${player1.attack}`);
+        $("#p1-defense-value").text(`${player1.defense}`);
         
         
-      } else if (id === "anime"){
+      } else if (id === "p1-anime"){
         player1StateControl = storeState(anime);
         const player1 = player1StateControl();
-        $("#name-value").text(`${player1.name}`);
-        $("#health-value").text(`${player1.health}`);
-        $("#attack-value").text(`${player1.attack}`);
-        $("#defense-value").text(`${player1.defense}`);
+        $("#p1-name-value").text(`${player1.name}`);
+        $("#p1-health-value").text(`${player1.health}`);
+        $("#p1-attack-value").text(`${player1.attack}`);
+        $("#p1-defense-value").text(`${player1.defense}`);
         
         
-      } else if (id === "waluigi"){
+      } else if (id === "p1-waluigi"){
         player1StateControl = storeState(waluigi);
         const player1 = player1StateControl();
-        $("#name-value").text(`${player1.name}`);
-        $("#health-value").text(`${player1.health}`);
-        $("#attack-value").text(`${player1.attack}`);
-        $("#defense-value").text(`${player1.defense}`);
+        $("#p1-name-value").text(`${player1.name}`);
+        $("#p1-health-value").text(`${player1.health}`);
+        $("#p1-attack-value").text(`${player1.attack}`);
+        $("#p1-defense-value").text(`${player1.defense}`);
     
   }
-});
-  $("#hurt").click(function(){
+  //PLAYER TWO
+  
+  $("#p2-hurt").click(function(){
     const player1 = player1StateControl(changeState("health")(-9));
-      $("#health-value").text(`${player1.health}`);
+      $("#p1-health-value").text(`${player1.health}`);
       console.log(player1);
     // const newState = player1(getHurtALot);
   });
-  $("#heal").click(function() {
-    const player1 = player1StateControl(changeState("health")(5));
-    $("#health-value").text(`${player1.health}`);
-    console.log(player1);
+  $("#p2-heal").click(function() {
+    const player2 = player2StateControl(changeState("health")(5));
+    $("#p2-health-value").text(`${player2.health}`);
+    console.log(player2);
   });
+  $("#p2-createCharacter").submit(function(event) {
+    event.preventDefault();
+    const id = $("input[name='p2-class']:checked").val();
+    console.log(id);
     
-});
-    // const player1 = storeState(initialValues);
-    // console.log(player1);
+      if( id === "p2-underpants"){
+        player2StateControl = storeState(underpants);
+        const player2 = player2StateControl();
+        $("#p2-name-value").text(`${player2.name}`);
+        $("#p2-health-value").text(`${player2.health}`);
+        $("#p2-attack-value").text(`${player2.attack}`);
+        $("#p2-defense-value").text(`${player2.defense}`);
+        
+        
+      } else if (id === "p2-anime"){
+        player2StateControl = storeState(anime);
+        const player2 = player2StateControl();
+        $("#p2-name-value").text(`${player2.name}`);
+        $("#p2-health-value").text(`${player2.health}`);
+        $("#p2-attack-value").text(`${player2.attack}`);
+        $("#p2-defense-value").text(`${player2.defense}`);
+        
+        
+      } else if (id === "p2-waluigi"){
+        player1StateControl = storeState(waluigi);
+        const player2 = player2StateControl();
+        $("#p2-name-value").text(`${player2.name}`);
+        $("#p2-health-value").text(`${player2.health}`);
+        $("#p2-attack-value").text(`${player2.attack}`);
+        $("#p2-defense-value").text(`${player2.defense}`);
     
-    // const player1 = changeState("name")($("#playerName").val());
-    //const playerName=changeState("Remus");//`$("#playerName").val()`);
-    //console.log(playerName);
-    //const newPlayer1State=player1(playerName);
-    //console.log(newPlayer1State);
-    // player1.name=`$("#playerName").val()`;
-    // console.log(player1.name);
-    // $('#playerName').text(newPlayer= changeState(`${player1.name}`));
-    // $('name-value').text(`Player's name is now ${player1.name}`);
-
-// const initialValues = {name: "", attack: 0, defense: 0};
-// const player1 = storeState(initialValues); //name="",  health=0...
-
-
-// // We create two functions using our function factory. We could easily create many more.
-// const feed = changeState("soil"); //const playerName=changeState("name")
-// const blueFood = feed(5); //const player1Name=playerName("Remus")
-// const newFernState = fern(blueFood); //newPlayerState=player1(player1Name)
-// console.log("add 5 to soil", newFernState);
-// // newFernState = {soil: 5, light: 0, water: 0}
+      }
+    });
+  });

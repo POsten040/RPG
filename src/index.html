@@ -7,26 +7,54 @@
     <title>Create a Character</title>
   </head>
   <body>
-    <form id="createCharacter">
+    <form id="p1-createCharacter">
       <!-- <label for="playerName"></label>
       <input type="text" id="playerName" required> -->
-      <!-- <label for="underpants">Underpants</label> -->
-      <input type="radio" name="class" id="underpants" value="underpants">Underpants<br>
-      <input type="radio" name="class" id="anime" value="anime">Anime Hair Guy<br>
-      <input type="radio" name="class" id="waluigi" value="waluigi">Waluigi<br>
+      <label for="p1-underpants">Underpants</label>
+      <input type="radio" name="p1-class" id="p1-underpants" value="p1-underpants">Underpants<br>
+      <input type="radio" name="p1-class" id="p1-anime" value="p1-anime">Anime Hair Guy<br>
+      <input type="radio" name="p1-class" id="p1-waluigi" value="p1-waluigi">Waluigi<br>
+      <button class="btn btn-success" type="submit">Choose Class</button>
+    </form>
+    <form id="p2-createCharacter">
+      <!-- <label for="playerName"></label>
+      <input type="text" id="playerName" required> -->
+      <label for="p2-underpants">Underpants</label>
+      <input type="radio" name="p2-class" id="p2-underpants" value="p2-underpants">Underpants<br>
+      <input type="radio" name="p2-class" id="p2-anime" value="p2-anime">Anime Hair Guy<br>
+      <input type="radio" name="p2-class" id="p2-waluigi" value="p2-waluigi">Waluigi<br>
       <button class="btn btn-success" type="submit">Choose Class</button>
     </form>
     <div class="container">
-      <div class="action-buttons">
-        <button class="btn-warning" id="hurt">Do a hurt</button>
-        <button class="btn-success" id="heal">Do a heal</button>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="p1" class="action-buttons">
+            <button class="btn-warning" id="p1-hurt">Do a hurt</button>
+            <button class="btn-success" id="p1-heal">Do a heal</button>
+          </div>
+          <div id="p1-name-value"></div>
+          <h1>Player 1</h1>
+          <h3><div id="p1-health-value"></div></h3>
+          <h3><div id="p1-name-value"></div></h3>
+          <h3><div id="p1-attack-value"></div></h3>
+          <h3><div id="p1-defense-value"></div></h3>
+        </div>
+      
+        <div class="col-md-6">
+          <div id="p2" class="col-md-6">
+            <div class="action-buttons">
+              <button class="btn-warning" id="p2-hurt">Do a hurt</button>
+              <button class="btn-success" id="p2-heal">Do a heal</button>
+            </div>
+            <div id="p2-name-value"></div>
+            <h1>Player 2s</h1>
+            <h3><div id="p2-health-value"></div></h3>
+            <h3><div id="p2-name-value"></div></h3>
+            <h3><div id="p2-attack-value"></div></h3>
+            <h3><div id="p2-defense-value"></div></h3>
+          </div>
+        </div>
       </div>
-      <div id="name-value"></div>
-      <h1>Your Player's Values</h1>
-      <h3><div id="health-value"></div></h3>
-      <h3><div id="name-value"></div></h3>
-      <h3><div id="attack-value"></div></h3>
-      <h3><div id="defense-value"></div></h3>
     </div>
   </body>
 </html>
